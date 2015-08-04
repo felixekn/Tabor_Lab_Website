@@ -69,8 +69,8 @@ a:focus {
 	from {background: none;}
     to {background: rgba(101,129,145, 1);}
 }
-.navbar-default .navbar-nav>.active>a, 
-.navbar-default .navbar-nav>.active>a:hover, 
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>.active>a:focus{
 	-webkit-animation: highlight 0.5s; /* Chrome, Safari, Opera */
 	-moz-animation: hightlight 0.5s; /* FireFox */
@@ -260,3 +260,4 @@ td {
 	content:url("../../Images/News/Ravi_shoots.jpg");
 	width: 200px;
 }
+.max-height { height: 200px; }
