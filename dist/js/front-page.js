@@ -15,6 +15,7 @@ $( window ).load(function() {
             $('.text').animate({marginTop: "-=" + splash_height}, 0);
             splash_height = $('.splash').outerHeight();
             $('.text').animate({marginTop: "+=" + splash_height}, 0);
+            // $('.splash').css("width", "100%");
         } else {
             console.log("Margin Same")
             splash_height = $('.splash').outerHeight();

@@ -1,5 +1,5 @@
 body {
-	padding-top: 70px;
+	padding-top: 65px;
 	background: #ecf0f1;
 	font-smooth:always;
 	-webkit-font-smoothing: antialiased;
@@ -8,7 +8,6 @@ a:focus {
 	outline:none;
 }
 .banner-placement {
-	position: relative;
 	margin-bottom: 15px;
 }
 .item {
@@ -91,6 +90,9 @@ a:focus {
 	from {background: none;}
     to {background: rgba(165, 200, 237, 0.21);}
 }
+/*Value is redundant but is kept in for splash banner
+sticking at correct height*/
+.navbar {margin-bottom: 15px;}
 .navbar-default .navbar-brand {
 	font-size: 26px;
 	font-weight: bold;
@@ -142,10 +144,17 @@ a:focus {
 		font-size: 24px;
 	}
 }
-.container {
+.navbar-toggle {
+	border-radius: 0;
+}
+.container,
+.nav-container {
 	max-width: 1000px;
 	padding-right: 0;
 	padding-left: 0;
+}
+.nav-container {
+	margin: 0 auto;
 }
 .splash {
 	background-color: #383838;
@@ -157,27 +166,31 @@ a:focus {
 	text-align: center;
 	vertical-align: baseline;
 	max-width: 1000px;
+	width: 100%;
 	padding-right: 0;
 	padding-left: 0;
 }
 @media (min-width: 768px) {
-  	.splash {
+  	.splash,
+  	.nav-container {
     	width: 750px;
   	}
 }
 @media (min-width: 992px) {
-  	.splash {
+  	.splash,
+  	.nav-container {
     	width: 970px;
   	}
 }
 @media (min-width: 1200px) {
-  	.splash {
+  	.splash,
+  	.nav-container {
     	width: 1170px;
 	}
 }
 .sticky {
-	top: 50px;
 	position: fixed;
+	top: 50px;
   	z-index: 1000;
 }
 /*Vertically centers images within Bootstrap columns*/
@@ -193,11 +206,17 @@ a:focus {
 }
 .copy-right {
 	text-align: left;
+	padding-left: 10px;
 }
 .lab-pic {
 	height: 200px;
 	width: 200px;
 }
+.lab-pic.alumni {
+	height: 150px;
+	width: 150px;
+}
+
 td {
 	padding-right: 50px;
 }
@@ -230,8 +249,31 @@ td {
 .blog-description {
 	margin-bottom: 0px;
 }
+.pagination {
+	width: 100%;
+}
+.custom-btn {
+	padding: 10px;
+	font-size: 16px;
+	color: #000;
+	text-decoration: none;
+	background-color: #f5f5f5;
+}
+.custom-btn:hover {
+	color: #4D4D4D;
+	text-decoration: none;
+}
+.custom-btn.next {
+	float: right;
+}
+.custom-btn.back {
+	float: left;
+}
 .name {
 	margin-bottom: 0px;
+}
+.name.alumni {
+	font-size: 16px;
 }
 .position {
 	color: #999;
@@ -248,6 +290,9 @@ td {
 .bio-info {
 	text-align: left;
 }
+.bio-info.alumni {
+	font-size: 14px;
+}
 .ravi_secret {
 	height: 200px;
 	width: 200px;
@@ -260,3 +305,4 @@ td {
 	content:url("../../Images/News/Ravi_shoots.jpg");
 	width: 200px;
 }
+
