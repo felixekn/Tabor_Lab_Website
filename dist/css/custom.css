@@ -216,12 +216,21 @@ sticking at correct height*/
 	height: 150px;
 	width: 150px;
 }
+.group-photo {
+	position: relative;
+	overflow: hidden;
+}
+.group-photo>h2 {
+	position: absolute;
+	bottom: 10px;
+	left: 30px;
+	padding: 5px;
+	color: white;
+	background: rgba(0,0,0,.6);
+}
 
 td {
 	padding-right: 50px;
-}
-.paper {
-	/*font-size: 15px;*/
 }
 .bacto-button {
 	padding-top: 20px;
@@ -253,15 +262,22 @@ td {
 	width: 100%;
 }
 .custom-btn {
+	box-sizing: border-box;
 	padding: 10px;
 	font-size: 16px;
 	color: #000;
 	text-decoration: none;
-	background-color: #f5f5f5;
+	background-color: #C6D5DA;
+	border: 1px solid #C6D5DA;
+	-moz-transition: border 0.1s ease;
+	-webkit-transition: border 0.1s ease;
+	-0-transition: border 0.1s ease;
+	transition: border 0.1s ease;
 }
 .custom-btn:hover {
-	color: #4D4D4D;
+	color: #000;
 	text-decoration: none;
+	border: 1px solid #586168;
 }
 .custom-btn.next {
 	float: right;
