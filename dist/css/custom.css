@@ -218,7 +218,7 @@ sticking at correct height*/
 }
 .group-photo {
 	position: relative;
-	overflow: hidden;
+	padding-bottom: 15px;
 }
 .group-photo>h2 {
 	position: absolute;
