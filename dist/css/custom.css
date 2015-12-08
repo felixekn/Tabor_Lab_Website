@@ -206,7 +206,7 @@ sticking at correct height*/
 }
 .copy-right {
 	text-align: left;
-	padding-left: 10px;
+	padding-left: 20px;
 }
 .lab-pic {
 	height: 200px;
@@ -218,12 +218,13 @@ sticking at correct height*/
 }
 .group-photo {
 	position: relative;
+	padding: 0;
 	padding-bottom: 15px;
 }
 .group-photo>h2 {
 	position: absolute;
 	bottom: 10px;
-	left: 30px;
+	left: 20px;
 	padding: 5px;
 	color: white;
 	background: rgba(0,0,0,.6);
@@ -247,6 +248,11 @@ td {
 	right: 15px;
 	border-radius: 4px;
 	box-shadow: 0 1px 0 rgba(0,0,0,.1);
+}
+@media (max-width: 768px) {
+	.blog-sidebar {
+		display: none;
+	}
 }
 .blog-post-meta {
 	margin-bottom: 7px;
@@ -321,4 +327,3 @@ td {
 	content:url("../../Images/News/Ravi_shoots.jpg");
 	width: 200px;
 }
-
