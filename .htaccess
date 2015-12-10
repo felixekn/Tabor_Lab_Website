@@ -1,9 +1,23 @@
 RewriteEngine On
+#301 from example.come/index.html to example.com
+RewriteCond %{REQUEST_URI} ^/index.html
+RewriteRule ^(.*)$ / [R=301,L]
+
 #example.com/page will display the contents of example.com/page.html
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.+)$ $1.html [L,QSA]
+
+#grabs wwww.example.com/directory/file.html for www.example.come/file
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !(directory)
+RewriteRule ^(.+) /directory%{REQUEST_URI}.html [L,QSA]
+
+#301 from example.com/directory/page.html to example.com/page
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /directory/.*\.html\ HTTP/
+RewriteRule ^(directory)/(.*)\.html$ /$2 [R=301,L]
 
 #301 from example.com/page.html to example.com/page
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*\.html\ HTTP/
