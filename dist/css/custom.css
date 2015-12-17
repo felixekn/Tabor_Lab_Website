@@ -326,3 +326,9 @@ td {
 	content:url("../../Images/News/Ravi_shoots.jpg");
 	width: 200px;
 }
+.nopadding-right {
+	padding-right: 0;
+}
+.nopadding {
+	padding:0;
+}
