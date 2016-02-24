@@ -3,19 +3,20 @@ $( window ).load(function() {
     // Splash banner sticky variables
     var splash_height = $('.splash').outerHeight();
     var nav_height = $('.navbar').outerHeight();
-    var splash_from_top = $('.navbar').outerHeight(true) +
-                          $('.banner-placement').outerHeight(true);
+    var splash_from_top =  $('.banner-placement').outerHeight(true) +
+                           parseInt($('.banner-wrapper').css('padding-top').replace("px", "")) +
+                           $('.navbar').outerHeight(true);
     var slide = true;
 
     // Updates sticky variables after a screen resize
     $(window).resize(function() {
-        splash_from_top = $('.navbar').outerHeight(true) +
-                          $('.banner-placement').outerHeight(true);
+        splash_from_top = $('.banner-placement').outerHeight(true) +
+                           parseInt($('.banner-wrapper').css('padding-top').replace("px", "")) +
+                           $('.navbar').outerHeight(true);
         if ($('.splash').hasClass('sticky')) {
-            $('.text').animate({marginTop: "-=" + splash_height}, 0);
+            $('.banner-wrapper').animate({'padding-bottom': "-=" + splash_height}, 0);
             splash_height = $('.splash').outerHeight();
-            $('.text').animate({marginTop: "+=" + splash_height}, 0);
-            // $('.splash').css("width", "100%");
+            $('.banner-wrapper').animate({'padding-bottom': "+=" + splash_height}, 0);
         } else {
             console.log("Margin Same")
             splash_height = $('.splash').outerHeight();
@@ -28,12 +29,12 @@ $( window ).load(function() {
         if ($(window).width() > 768 || !slide) {
             if (($(window).scrollTop() >= (splash_from_top - nav_height)) && slide) {
                 $('.splash').addClass('sticky');
-            	$('.text').animate({marginTop: "+=" + splash_height}, 0);
-            	slide = false;
+                $('.banner-wrapper').animate({'padding-bottom': "+=" + splash_height}, 0);
+                slide = false;
             } else if (($(window).scrollTop() < (splash_from_top - nav_height)) && !slide) {
                 $('.splash').removeClass('sticky');
-            	$('.text').animate({marginTop: "-=" + splash_height}, 0);
-            	slide = true;
+                $('.banner-wrapper').animate({'padding-bottom': "-=" + splash_height}, 0);
+                slide = true;
             }
         }
     });
