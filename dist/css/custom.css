@@ -45,7 +45,6 @@ a:focus {
 .text {
 	padding: 20px;
 	padding-top: 1px;
-	border-radius: 4px;
 	/*box-shadow: 0 0 5px 0 rgba(0,0,0,0.3);*/
 	/*box-shadow: 0 1px 0 rgba(0,0,0,.2);*/
 }
@@ -183,11 +182,10 @@ sticking at correct height*/
 	min-height: 150px;
 }
 .footer {
-	border-top: 1px solid #ccc;
+	border-top: 10px solid #eef2f3;
 	width: 100%;
 	padding-top: 5px;
 	margin: 0 auto;
-	background: #eef2f3;
 }
 .splash {
 	background-color: #383838;
@@ -470,18 +468,39 @@ td {
 	width: 100%;
 	height: auto;
 }
-.footer-links > div > a > .logo {
+.logo {
 	max-height: 60px;
 	display: inline-block;
-	border: 4px solid #F4F4F4;
-	border-radius: 10px;
+	padding-left: 4px;
+	padding-right: 4px;
+	margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+	.logo {max-height: 30px;}
 }
 .fluid-row {
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+	.fluid-row {
+		justify-content: space-around;
+	}
 }
 .rice-affiliations {
-	padding-left: 4px;
+	display: flex;
+	align-items: center;
+}
+@media (max-width: 768px) {
+	.rice-affiliations {
+		font-size: 10px;
+		line-height: 1;
+	}
+}
+.block {
+	display: inline-block;
+	padding-bottom: 10px;
 }
 .copyright {
 	margin: 0;
